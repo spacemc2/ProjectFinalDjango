@@ -10,6 +10,7 @@ urlpatterns = [
     # name the URL
     path(route='', view=views.CourseListView.as_view(), name='index'),
     path('registration/', views.registration_request, name='registration'),
+    path('<int:course_id>/submit/', views.submit, name='submit'),
     path('login/', views.login_request, name='login'),
     path('logout/', views.logout_request, name='logout'),
     # ex: /onlinecourse/5/
